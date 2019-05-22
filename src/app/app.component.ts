@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { PersonaService } from './servicios/persona.service'; /**Importar el servicio */
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
