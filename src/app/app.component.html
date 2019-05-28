@@ -6,12 +6,21 @@
 <a class="navbar-brand" href="#">GLUD</a>
 <div id="navegacion">
   <div class="navbar-nav">
-    <a class="nav-item nav-link">Formulario</a>
-    <a class="nav-item nav-link"> Persona</a>
+    <!--La directiva routerLink reempleza el href de html-->
+    <!--el routerLinkActive  revice clases de css y si ese link es el activo agrega las clases css
+    como estamos usamo bootstrap podemos usar active-->
+    <a class="nav-item nav-link" routerLink="/formulario" routerLinkActive ="active" >Formulario</a>
+    <a class="nav-item nav-link" routerLink="/persona" routerLinkActive ="active"> Persona</a>
   </div>
 </div>
 </nav>
 
+
+
+<!--
+  El router-outlet es el componente que nos permite saber en que lugar debe renderizar las vistas
+
+-->
 <router-outlet></router-outlet>
 
 

@@ -1,21 +1,12 @@
 <div class="container">
 
-  <h2>Formulario</h2>
+  <h2>Consulta:</h2>
 
   <form>
 
     <div class="form-group">
       <label for="idPersona">ID</label>
-      <input type="text" class="form-control" id="idPersona" placeholder="Id de la persona" [(ngModel)]="persona.id" name="idPersona" (change)="seleccionarPersona($event)"> <!--este $event lo define angular-->
-    </div>
-
-    <div class="form-group">
-      <label for="Nombre">Nombre</label>
-      <input type="text" class="form-control" id="Nombre" placeholder="Nombre de la persona" [(ngModel)]="persona.first_name" name="namePersona" >
-    </div>
-    <div class="form-group">
-      <label for="Apellido">Apellido</label>
-      <input type="text" class="form-control" id="Apellido" placeholder="Apellido de la persona" [(ngModel)]="persona.last_name" name="apeelidoPersona" >
+      <input type="text" class="form-control" id="idPersona" placeholder="Id de la persona" [(ngModel)]="persona.id" name="idPersona" (change)="selectId($event)"> <!--este $event lo define angular-->
     </div>
 
     <button type="submit" class="btn btn-primary" (click)="mostrar()"> Mostrar</button>

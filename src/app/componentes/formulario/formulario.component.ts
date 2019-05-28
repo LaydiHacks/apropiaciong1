@@ -21,14 +21,16 @@ export class FormularioComponent implements OnInit, OnChanges {
   public persona: any = {}; /**Objeto */
   // log:string[]
 
-  constructor(private personaServiece:PersonaService) { }
+  constructor(private personaService:PersonaService) { }
 
   ngOnInit() {
-    this.personaServiece.traerPersonas().subscribe( 
-      data => {  /** A la final data es la resolución de la promesa por eso no se llama arriba en la variable */
+    /** A la final data es la resolución de la promesa por eso no se llama arriba en la variable */
+    /*
+    this.personaService.traerPersonas().subscribe( 
+      data => {  
         this.personas = data;
         this.persona = this.personas[0];
-      })
+      })*/
   }
 
   // ngOnChanges(changes: SimpleChange){ /**Iniciar la propiedad de ngOnchanges */
@@ -47,6 +49,10 @@ export class FormularioComponent implements OnInit, OnChanges {
     let personaactual = personita.target.value - 1;
     this.persona = this.personas[personaactual]
     console.log(personita.target.value);
+  }
+ 
+  public selectId(){
+    this.personaService.setPersona(this.persona.id)
   }
 
 }
