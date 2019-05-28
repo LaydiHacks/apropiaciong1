@@ -17,6 +17,7 @@ directiva ngModel*/
 /** Servicios */
 import { PersonaService } from './servicios/persona.service';
 import { FormularioComponent } from './componentes/formulario/formulario.component';
+import { PersonaComponent } from './componentes/persona/persona.component';
 
 
 
@@ -25,7 +26,7 @@ import { FormularioComponent } from './componentes/formulario/formulario.compone
 
 @NgModule({
   declarations: [ /** Declaraciones -> Agreagamos los componente que necesitamos */
-    AppComponent, FormularioComponent
+    AppComponent, FormularioComponent, PersonaComponent
   ],
   imports: [ /**  * Importaciones -> agregamos los modulos que necesitamos*/
     BrowserModule,
